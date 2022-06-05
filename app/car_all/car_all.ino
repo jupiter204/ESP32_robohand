@@ -56,7 +56,7 @@ void ps3control(void)
     if (Ps3.data.analog.stick.ry < -50)
         aq++;
 
-    delay(10);
+    delay(15);
 }
 
 void angle(void)
@@ -85,34 +85,34 @@ void car(void)
     if (Ps3.data.analog.button.up)
     {
         Serial.println("w");
-        ledcWrite(cin2, 230);
+        ledcWrite(cin2, 200);
         ledcWrite(cin1, 0);
-        ledcWrite(cin4, 230);
+        ledcWrite(cin4, 200);
         ledcWrite(cin3, 0);
     }
     if (Ps3.data.analog.button.left)
     {
         Serial.println("a");
         ledcWrite(cin1, 0);
-        ledcWrite(cin2, 230);
-        ledcWrite(cin3, 230);
+        ledcWrite(cin2, 200);
+        ledcWrite(cin3, 200);
         ledcWrite(cin4, 0);
     }
     if (Ps3.data.analog.button.down)
     {
         Serial.println("s");
         ledcWrite(cin2, 0);
-        ledcWrite(cin1, 230);
+        ledcWrite(cin1, 200);
         ledcWrite(cin4, 0);
-        ledcWrite(cin3, 230);
+        ledcWrite(cin3, 200);
     }
     if (Ps3.data.analog.button.right)
     {
         Serial.println("d");
-        ledcWrite(cin1, 230);
+        ledcWrite(cin1, 200);
         ledcWrite(cin2, 0);
         ledcWrite(cin3, 0);
-        ledcWrite(cin4, 230);
+        ledcWrite(cin4, 200);
     }
     if (Ps3.data.analog.button.up == false && Ps3.data.analog.button.left == false && Ps3.data.analog.button.down == false && Ps3.data.analog.button.right == false)
     {
